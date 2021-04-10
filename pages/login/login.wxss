@@ -1,0 +1,55 @@
+.button{
+  margin-top: 30rpx;
+  margin-bottom: 30rpx;
+}
+
+.input{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  border:1rpx solid #2c2c2c;
+  padding: 16rpx;
+  border-radius: 15rpx;
+}
+
+.input1{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.input2{
+width: 50%;
+padding: 10rpx;
+border: 1rpx solid #2c2c2c;
+border-radius: 10rpx;
+}
+
+.container0{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 70%;
+  height: 45%;
+  position: fixed;
+  top: 19%;
+  left: 15%;
+  background-color: white;
+  border: 1rpx solid #2c2c2c;
+}
+
+.container1{
+  padding: 20rpx;
+  width: 90%;
+}
+
+.container2{
+  width: 90%;
+  height: 100rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

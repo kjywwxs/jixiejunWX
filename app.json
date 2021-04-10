@@ -1,0 +1,38 @@
+{
+  "pages":[ 
+    "pages/demo/demo",
+    "pages/denglu/denglu",
+    "pages/login/login",
+    "pages/index/index",
+    "pages/kecheng/kecheng",
+    "pages/demo0/demo0",
+    "pages/courseFile/courseFile"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "西南教务通",
+    "navigationBarTextStyle":"black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/denglu/denglu",
+        "text": "我的",
+        "iconPath": "icons/_mine.png",
+        "selectedIconPath": "icons/mine.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "课程",
+        "iconPath": "icons/_kecheng.png",
+        "selectedIconPath": "icons/kecheng.png"
+      }
+    ]
+  },
+  "useExtendedLib": {
+    "weui": true
+  }
+}

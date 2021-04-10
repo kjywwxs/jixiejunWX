@@ -1,0 +1,60 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "pages/demo/demo",
+          "pathName": "pages/demo/demo",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/index/index",
+          "pathName": "pages/index/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/login/login",
+          "pathName": "pages/login/login",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/kecheng/kecheng",
+          "pathName": "pages/kecheng/kecheng",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/denglu/denglu",
+          "pathName": "pages/login/login",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/courseFile/courseFile",
+          "pathName": "pages/courseFile/courseFile",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/demo0/demo0",
+          "pathName": "pages/demo0/demo0",
+          "query": "",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

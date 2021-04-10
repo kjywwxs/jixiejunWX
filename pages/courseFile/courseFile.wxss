@@ -1,0 +1,85 @@
+Page{
+  height: 100%;
+  background-color: gainsboro;
+}
+
+.root{
+  background-color: gainsboro;
+  position: relative;
+  top: 84rpx;
+  left: 0;
+}
+
+.kcname{
+  height: 100rpx;
+  width: 100%;
+  background-color: rgb(241, 239, 239);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding:0 20rpx;
+}
+
+.kcname text{
+  line-height: 70rpx;
+  width: 70%;
+  display:-webkit-box; 
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient:vertical; 
+  -webkit-line-clamp: 1;
+}
+
+.btn{
+  height: 76rpx;
+  width: 20%;
+  text-align: center;
+  line-height: 70rpx;
+  color: rgb(131, 131, 131);
+  font-size: 35rpx;
+}
+
+.fileitem{
+  margin: 8rpx 0;
+  height: 150rpx;
+  background-color: white;
+  position: relative;
+}
+
+.delete{
+  height: 65rpx;
+  background-color: #FE3B30;
+  padding: 50rpx 0; 
+}
+
+.fileitem .name{
+  margin: 0 50rpx;
+  color: rgb(43, 43, 136);
+  font-size: larger;
+  position: relative;
+  top: 40rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display:-webkit-box; 
+  -webkit-box-orient:vertical; 
+  -webkit-line-clamp: 1;
+}
+
+.fileitem .time{
+  height: 30rpx;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: small;
+  position: absolute;
+  top: 110rpx;
+  left: 600rpx;
+}
+
+
+
+

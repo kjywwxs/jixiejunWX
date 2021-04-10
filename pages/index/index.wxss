@@ -1,0 +1,58 @@
+/**index.wxss**/
+.userinfo {
+  display: flex ;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.userinfo-avatar {
+  width: 150rpx;
+  height: 150rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: rgb(24, 19, 19);
+}
+.container1 {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+} 
+
+.mainViewClass{
+  height:1000rpx;
+  width:100%;
+}
+
+.bottomview{
+  background-color: lightgray;
+  height: 63%;
+  width: 100%;
+}
+
+.cardClass{
+  display: flex;
+  flex-direction: column;
+  font-size: 28rpx;
+}
+
+.sectionClass{
+  margin-top: 20rpx;
+}
+
+.cellClass{
+  background-color: white;
+  width: 100%;
+  height: 90rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1rpx solid lightgray;
+  box-sizing: border-box;
+  padding-left: 16rpx;
+  padding-right: 16rpx;
+}

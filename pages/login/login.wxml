@@ -1,0 +1,24 @@
+<image src="../../icons/library.jpg" mode="aspectFill" style="height:1334rpx;width:100%;"></image>
+<view class="container0">
+<text class="container1">登录系统</text>
+<view class="container2">
+<view class="input">
+  <image src="../../icons/consumer.svg" mode="aspectFill" style="width:40rpx;height:40rpx"></image>
+  <input  type="number" placeholder="请输入学号/工号" bindinput="content1" value="{{username}}"/>
+</view>
+</view>
+<view class="container2">
+<view class="input">
+  <image src="../../icons/lock.svg" mode="aspectFill" style="width:40rpx;height:40rpx"></image>
+  <input type="text" password placeholder="请输入密码" bindinput="content2" value="{{password}}"/>
+</view>
+</view>
+<view class="container2">
+<view class="input1">
+  <input class="input2" type="text" placeholder="请输入验证码" bindinput="content3" value="{{ranstring}}"/>
+  <image bindtap="resetyz" src="{{imgurl}}" mode="aspectFit" 
+  style="width: 150rpx;height: 76rpx;border-radius: 10rpx;"></image>
+</view></view>
+<button  type="primary" bindtap="login">登录</button>
+<!-- <button type="primary" bindtap="courseGet">具体爬取</button> -->
+</view>

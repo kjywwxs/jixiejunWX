@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "mp-slideview": "weui-miniprogram/slideview/slideview"
+  },
+  "navigationBarTitleText": "课件",
+  "navigationBarBackgroundColor": "#333",
+  "navigationBarTextStyle": "white"
+}

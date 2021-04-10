@@ -1,0 +1,21 @@
+
+<block wx:if="{{isStudent}}">
+  <view class="root">
+  <view class="kcname"><text>课程名称</text></view>
+  <view class="fileitem" wx:for="{{file}}" wx:key="file" bindtap="openfile" data-file="{{file[index]}}">
+    <view class="name">{{file[index].name}}</view>
+    <view class="time">{{file[index].time}}</view>
+  </view>
+</view>
+</block>
+<block wx:else>
+  <view class="root">
+  <view class="kcname"> <text>课程名称课程名称课程名称课程名称课程名称课程名称</text> <view class="btn" bindtap="uploadfile">上传课件</view> </view>
+  <view class="fileitem" wx:for="{{file}}" wx:key="file" bindtap="openfile" data-file="{{file[index]}}">
+    <mp-slideview buttons="{{slideButtons}}" bindbuttontap="deletefile" data-file="{{file[index]}}" >
+     <view class="name">{{file[index].name}}</view>
+     <view class="time">{{file[index].time}}</view>
+   </mp-slideview>
+  </view>
+</view>
+</block>

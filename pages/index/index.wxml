@@ -1,0 +1,41 @@
+<!--index.wxml-->
+  <view class="userinfo">
+    <button  open-type="getUserInfo" bindgetuserinfo="UserInfoHandler"> 获取头像昵称 </button>
+    <open-data type="userAvatarUrl"></open-data>
+    <open-data type="userNickName"></open-data>
+    <!-- <block>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block> -->
+  </view>
+<template name="cellTemplate">
+  <text style="text-align:left">{{item.imagename}}</text>
+  <image src="{{item.imagesrc}}" mode="aspectFit" style="width:20px; height: 20px; background-color: transparent;"></image>
+</template>
+<view class="mainViewClass">
+  <view class="bottomview">
+   <scroll-view scroll-y="true">
+    <view class="sectionClass">
+      <block>
+        <view class="cellClass">
+          <template is="cellTemplate" data="{{item:section1}}" />
+        </view>
+      </block>
+    </view>
+    <view class="sectionClass">
+      <block wx:for="{{section2}}" wx:key="key" wx:for-item="section2">
+        <view class="cellClass">
+         <template is="cellTemplate" data="{{item:section2}}" />
+        </view>
+      </block>
+    </view>
+    <view class="sectionClass">
+      <block wx:for="{{section3}}" wx:key="key" wx:for-item="section3">
+        <view class="cellClass">
+          <template is="cellTemplate" data="{{item:section3}}" />
+        </view>
+      </block>
+    </view>
+   </scroll-view>
+  </view>
+</view>
