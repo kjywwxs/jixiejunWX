@@ -1,4 +1,5 @@
 {
+  "cloudfunctionRoot": "cloudFunctions/",
   "description": "项目配置文件",
   "packOptions": {
     "ignore": []
@@ -23,26 +24,25 @@
     "compileHotReLoad": false,
     "useMultiFrameRuntime": true,
     "useApiHook": true,
+    "useApiHostProcess": false,
     "babelSetting": {
       "ignore": [],
       "disablePlugins": [],
       "outputPath": ""
     },
-    "enableEngineNative": false,
     "bundle": false,
     "useIsolateContext": true,
-    "useCompilerModule": true,
+    "useCompilerModule": false,
     "userConfirmedUseCompilerModuleSwitch": false,
     "userConfirmedBundleSwitch": false,
     "packNpmManually": false,
     "packNpmRelationList": [],
-    "minifyWXSS": true,
-    "useApiHostProcess": false
+    "minifyWXSS": true
   },
   "compileType": "miniprogram",
-  "libVersion": "2.16.0",
+  "libVersion": "2.13.0",
   "appid": "wxb52bd3f9641f1839",
-  "projectname": "%E5%B7%A5%E7%A8%8B%E6%96%87%E4%BB%B6",
+  "projectname": "%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F",
   "debugOptions": {
     "hidedInDevtools": []
   },
@@ -50,6 +50,7 @@
   "isGameTourist": false,
   "simulatorType": "wechat",
   "simulatorPluginLibVersion": {},
+  "cloudfunctionTemplateRoot": "cloudfunctionTemplate",
   "condition": {
     "plugin": {
       "list": []
@@ -63,26 +64,20 @@
     "miniprogram": {
       "list": [
         {
-          "name": "pages/demo/demo",
-          "pathName": "pages/demo/demo",
-          "query": "",
-          "scene": null
-        },
-        {
           "name": "pages/index/index",
           "pathName": "pages/index/index",
           "query": "",
           "scene": null
         },
         {
-          "name": "pages/denglu/denglu",
-          "pathName": "pages/denglu/denglu",
+          "name": "pages/newSearchList/newSearchList",
+          "pathName": "pages/newSearchList/newSearchList",
           "query": "",
           "scene": null
         },
         {
-          "name": "pages/login/login",
-          "pathName": "pages/login/login",
+          "name": "pages/webview/webview",
+          "pathName": "pages/webview/webview",
           "scene": null
         }
       ]

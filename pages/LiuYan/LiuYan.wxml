@@ -1,0 +1,22 @@
+<view class="title">
+   <text>留言内容</text> 
+   <view class="btn" bindtap="refreshform">刷新内容</view> 
+</view>
+<scroll-view scroll-y class="root">
+   <view class="item"  wx:for="{{pjnr}}" wx:key="pjnr">
+     <view class="itemT">
+        <image src="../../icons/avatar.jpg" mode="heightFix"></image>
+        <text>{{pjnr[index].xuehao}} {{pjnr[index].name}}</text>
+    </view>
+    <view class="itemM">{{pjnr[index].pjnr}}</view>
+    <view class="itemB" >{{pjnr[index].time}}</view>
+  </view>
+</scroll-view>
+<view class="content">
+  <form bindsubmit="formSubmit"bindreset="formReset">
+    <view class="section"> 
+      <button style="  height:70%;width: 20%;padding: 0;display:flex;align-items:center;justify-content:center; margin:0;border-radius: 10rpx;" type="primary"  form-type="submit">上传</button>
+      <input name="suggest"  placeholder="点此输入你的留言" value="{{suggest}}"/>
+    </view>
+ </form>class="root"
+</view>

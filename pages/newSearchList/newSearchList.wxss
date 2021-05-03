@@ -1,0 +1,57 @@
+/* pages/newSearchList/newSearchList.wxss */
+page{
+  display: flex;
+  flex-direction: column;
+  background-color: gainsboro;
+}
+
+.content{
+  display: flex;
+  flex-direction: column;
+}
+
+.content .item{
+  background-color: white;
+  margin: 5rpx 0 0;
+}
+
+.item .briefInfo{
+  height: 150rpx;
+  flex-direction: column;
+  position: relative;
+}
+
+.briefInfo .title{
+  /* height: 100rpx; */
+  color: darkblue;
+  font-size: 35rpx;
+  font-weight: bold;
+  margin-left: 15rpx;
+  /* overflow: hidden;//超出隐藏
+  text-overflow: ellipsis;//溢出显示用省略号
+  display:-webkit-box; //作为弹性伸缩盒子模型显示
+  -webkit-box-orient:vertical; //设置伸缩盒子的子元素排列方式  从上到下垂直排列
+  -webkit-line-clamp:2; //显示的行数 */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display:-webkit-box; 
+  -webkit-box-orient:vertical; 
+  -webkit-line-clamp:2;
+}
+
+.briefInfo .type{
+  position: absolute;
+  top: 100rpx;
+  left: 50rpx;
+}
+
+.briefInfo .time{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: small;
+  /* margin-right: 10rpx;
+  text-align: end; */
+  position: absolute;
+  top: 115rpx;
+  left: 580rpx;
+}
+

@@ -1,0 +1,53 @@
+<view class="topBars">
+  <block wx:if="{{choosedId == 0}}">
+    <view class="topBar-item0" data-ymid="0" bindtap="turn">发布签到</view>
+  </block>
+  <block wx:else>
+    <view class="topBar-item1" data-ymid="0" bindtap="turn">发布签到</view>
+  </block>
+  <block wx:if="{{choosedId == 1}}">
+    <view class="topBar-item0" data-ymid="1" bindtap="turn">缺席名单</view>
+  </block>
+  <block wx:else>
+    <view class="topBar-item1" data-ymid="1" bindtap="turn">缺席名单</view>
+  </block> 
+  <block wx:if="{{choosedId == 2}}">
+    <view class="topBar-item0" data-ymid="2" bindtap="turn">学生名单</view>
+  </block>
+  <block wx:else>
+    <view class="topBar-item1" data-ymid="2" bindtap="turn">学生名单</view>
+  </block>
+</view>
+
+<block wx:if="{{choosedId == 0}}">
+  <view class="content" >
+    <map class="map" latitude="{{latitude}}" longitude="{{longitude}}" show-location>
+    </map>
+    <button class="bt_1" type="primary" bindtap="ksqd">{{ksqd}}</button>
+  <!-- <view>{{k.xs1.xsnumber}}</view> -->
+  <view style="width:100%;display:flex;align-items:center;justify-content:center;color:red;background-color:rgb(237, 250, 161);font-size:small;">下方灰色按钮用于设置签到时长</view>
+    <view class="qdtime">
+      <view class="bt_2" bindtap="shifeng">10min</view>
+      <view class="bt_2" bindtap="shiwufeng">15min</view>
+      <view class="bt_2" bindtap="ershifeng">20min</view>
+    </view>
+    <button class="bt_5" bindtap="jsqd">{{jsqd}}</button>
+  </view>
+</block>
+
+<block wx:if="{{choosedId == 1}}">
+  <!-- <view class="title">
+     <text>缺席名单</text> 
+     <view class="btn" bindtap="refreshform">刷新名单</view> 
+  </view> -->
+  <view class="tip">缺席名单仅当天有效，请老师及时记录保存</view>
+  <view class="root0" wx:for="{{qdxx}}" wx:key="qdxx">
+     <view class="item">{{index+1}} ： {{qdxx[index].xuehao}}{{qdxx[index].xingming}}</view>
+  </view>
+</block>
+
+<block wx:if="{{choosedId == 2}}">
+  <view class="root1" wx:for="{{p}}" wx:key="p">
+     <view class="item">{{p[index].xuhao}} ： {{p[index].xuehao}} {{p[index].xingming}}</view>
+  </view>
+</block>

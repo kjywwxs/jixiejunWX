@@ -1,0 +1,112 @@
+.title{
+  height: 8%;
+  width: 100%;
+  background-color: rgb(241, 239, 239);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding:0 20rpx;
+}
+
+.title text{
+  line-height: 70rpx;
+  width: 70%;
+  display:-webkit-box; 
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient:vertical; 
+  -webkit-line-clamp: 1;
+}
+
+.btn{
+  /* height: 76rpx; */
+  width: 20%;
+  text-align: center;
+  line-height: 70rpx;
+  color: rgb(131, 131, 131);
+  font-size: 35rpx;
+}
+.root{
+  /* background-color: rgb(189, 37, 37); */
+  position: absolute;
+  top: 8%;
+  left: 0;
+  bottom: 90%;
+  width: 100%;
+  height: 82%;
+  /* height: 90%; */
+}
+.item{
+  margin: 8rpx 8rpx;
+  padding: 8rpx 6rpx;
+  /* height: 200rpx; */
+  background-color: rgb(231, 235, 253);
+  /* position: relative; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.itemT{
+  height: 80rpx;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.itemT image{
+  justify-content: center;
+  height: 80rpx;
+  width: 20%;
+  border-radius: 50%;
+}
+.itemT text{
+  text-align: end;
+  width: 80%;
+  font-size: 40rpx;
+}
+.itemM{
+  width: 95%;
+  font-size: 36rpx;
+  align-items: center;
+  word-break:break-all;
+}
+.itemB{
+  width: 95%;
+  font-size: 28rpx;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.content{
+  top: 90%;
+  left: 0;
+  z-index: 999;
+  height: 10%;
+  width: 100%;
+  position: fixed;
+}
+.section{
+  height: 100%;
+  width: auto;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 6rpx;
+  margin-left: 8rpx;
+  margin-right: 8rpx;
+  background-color: rgb(245, 244, 244);
+}
+.section input{
+  height: 70%;
+  width: 75%;
+  background-color: rgb(228, 227, 227);
+  border-radius: 10rpx;
+}

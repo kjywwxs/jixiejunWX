@@ -1,0 +1,17 @@
+<view class="main">
+  <view class="tabs">
+    <scroll-view scroll-x="true" class="nav" scroll-with-animation>
+      <view
+        wx:for="{{tabs}}" 
+        wx:key="id"
+        class="item {{item.isActive?'active':''}}"
+        bindtap="hanldeItemTap"
+        data-index="{{index}}">
+          {{item.name}}
+      </view>
+    </scroll-view>
+  </view>
+  <view class="content">
+    <slot></slot>
+  </view>
+</view>

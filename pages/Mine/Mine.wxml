@@ -1,0 +1,87 @@
+<block wx:if="{{isStudent}}">
+  <view class="container0">
+    <view class="container1">学生</view>
+    <view class="container2">
+      <view class="container2-1">
+        <view class="container2-1-1"><open-data type="userAvatarUrl" ></open-data></view>
+      </view>
+      <view class="container2-2">
+        <view>{{userInfo[0]}}</view>
+        <view>{{userInfo[1]}}</view>
+      </view>
+      <view class="container23">
+        <view class="container2-3-1" bindtap="azckkb">按周查看课表</view>
+        <view class="container2-3-2" bindtap="gxsj">更新数据</view>
+      </view>
+    </view>
+      <view class="container3" wx:for="{{kb}}" wx:key="key" wx:for-item="kb">
+       <block>
+         <block wx:if="{{kb.qdpd}}">
+            <!-- <block wx:if="{{xkdm3==kb.xkbh}}"> -->
+              <view wx:if="{{kb.djs}}" class="container3-1">{{kb.qdminute}}分钟后签到结束</view>
+              <view wx:else class="container3-1">签到中...</view>
+            <!-- </block> -->
+         </block>
+         <view wx:elif="{{zhouji==kb.sjxqj&&xkdm1==kb.xkbh&&index==0}}" class="container3-1">即将开始</view>
+         <view wx:elif="{{zhouji==kb.sjxqj&&xkdm2==kb.xkbh&&index==0}}" class="container3-1">正在上课</view>
+         <view wx:else class="container3-1">{{kb[index].qdpd}}</view>
+       </block>
+       <view class="container3-2">课程：{{kb.kcmc}}</view>
+       <view class="container3-3">
+         <view>{{kb.dd}}</view>
+         <view>{{kb.sjzs}} {{kb.sjxqj}} {{kb.sjjs}}</view>
+        </view>
+       <view class="container3-4">
+         <!-- <block wx:if="{{kb.qdpd}}"> -->
+         <view wx:if="{{kb.qdpd}}" bindtap="qiandao" data-kcmc="{{kb.kcmc}}" data-qdpd="{{kb.qdpd}}" data-xkbh="{{kb.xkbh}}" style="color:red;">签到中</view>
+         <view wx:else bindtap="qiandao" data-kcmc="{{kb.kcmc}}" data-xkbh="{{kb.xkbh}}">签到</view>
+        <!-- </block> -->
+         <!-- <view wx:else bindtap="qiandao" data-kcmc="{{kb.kcmc}}" data-xkbh="{{kb.xkbh}}">签到</view> -->
+         <view bindtap="kejian" data-kcmc="{{kb.kcmc}}" data-xkbh="{{kb.xkbh}}">课件</view>
+         <view bindtap="liuyan" data-kcmc="{{kb.kcmc}}" data-xkbh="{{kb.xkbh}}">留言</view>
+        </view>
+     </view>
+  </view>
+</block>
+<block wx:else>
+  <view class="container0">
+    <view class="container1">老师</view>
+    <view class="container2">
+      <view class="container2-1">
+        <view class="container2-1-1"><open-data type="userAvatarUrl" ></open-data></view>
+      </view>
+      <view class="container2-2">
+        <view>{{userInfo[0]}}</view>
+        <view>{{userInfo[1]}}</view>
+      </view>
+      <view class="container2-3">
+        <view class="container2-3-1" bindtap="azckkb">按周查看课表</view>
+        <view class="container2-3-2" bindtap="gxsj">更新数据</view>
+      </view>
+    </view>
+      <view class="container3" wx:for="{{kb}}" wx:key="key" wx:for-item="kb">
+       <block>
+         <block wx:if="{{kb.qdpd}}">
+            <!-- <block wx:if="{{xkdm3==kb.xkbh}}"> -->
+              <view wx:if="{{kb.djs}}" class="container3-1">{{kb.qdminute}}分钟后签到结束</view>
+              <view wx:else class="container3-1">签到中...</view>
+            <!-- </block> -->
+         </block>
+         <view wx:elif="{{zhouji==kb.sjxqj&&xkdm1==kb.xkbh&&index==0}}" class="container3-1">即将开始</view>
+         <view wx:elif="{{zhouji==kb.sjxqj&&xkdm2==kb.xkbh&&index==0}}" class="container3-1">正在上课</view>
+         <view wx:else class="container3-1"></view>
+       </block>
+       <view class="container3-2">课程：{{kb.kcmc}}</view>
+       <view class="container3-3">
+         <view>{{kb.sjzs}} {{kb.sjxqj}} {{kb.sjjs}}</view>
+         <view>{{kb.dd}}</view>
+        </view>
+       <view class="container3-4">
+        <view bindtap="qiandao" data-kcmc="{{kb.kcmc}}" data-xkbh="{{kb.xkbh}}" data-js="{{kb.mwjs-kb.qsjs+1}}" data-kcid="{{index}}">签到</view>
+         <view bindtap="kejian" data-kcmc="{{kb.kcmc}}" data-xkbh="{{kb.xkbh}}" >课件</view>
+         <view bindtap="liuyan" data-kcmc="{{kb.kcmc}}" data-xkbh="{{kb.xkbh}}" >留言</view>
+         <view>教学班：{{kb.banhao}}</view>
+        </view>
+     </view>
+  </view>
+</block>

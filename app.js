@@ -1,11 +1,12 @@
-
+//app.js
 App({
   onLaunch: function () {
-    // 云能力初始化
-    wx.cloud.init({ 
-      env: 'test-9gva3bojbbd8b4eb',
-      traceUser: true
+    //云能力初始化
+    wx.cloud.init({
+      env:'test-9gva3bojbbd8b4eb',
+      traceUser:true//访问记录到用户管理中，在云开发控制台可见
     })
+
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())

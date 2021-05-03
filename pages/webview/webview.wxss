@@ -1,0 +1,30 @@
+
+.title{
+  font-size: larger;
+  font-weight: bold;
+  margin: 0 20rpx;
+  color: darkblue;
+}
+
+.border image{
+   height: 20rpx;
+   width: 100%;
+}
+
+.heards{
+  margin:0 20rpx;
+  padding: 20rpx;
+  display: grid;
+  grid-template-columns: auto auto;
+  /* grid-template-rows :100px 100px;  */
+  grid-gap: 10rpx 30rpx ;
+}
+
+.heards .item{
+  font-size: small;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display:-webkit-box; 
+  -webkit-box-orient:vertical; 
+  -webkit-line-clamp:1;
+}

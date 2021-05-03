@@ -1,41 +1,48 @@
-<!--index.wxml-->
-  <view class="userinfo">
-    <button  open-type="getUserInfo" bindgetuserinfo="UserInfoHandler"> 获取头像昵称 </button>
-    <open-data type="userAvatarUrl"></open-data>
-    <open-data type="userNickName"></open-data>
-    <!-- <block>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block> -->
-  </view>
-<template name="cellTemplate">
-  <text style="text-align:left">{{item.imagename}}</text>
-  <image src="{{item.imagesrc}}" mode="aspectFit" style="width:20px; height: 20px; background-color: transparent;"></image>
-</template>
-<view class="mainViewClass">
-  <view class="bottomview">
-   <scroll-view scroll-y="true">
-    <view class="sectionClass">
-      <block>
-        <view class="cellClass">
-          <template is="cellTemplate" data="{{item:section1}}" />
-        </view>
-      </block>
+<view class="root">
+   <!-- 头部 -->
+ <view class="header">
+   <image src="../../images/header.jpg"></image>
+   <view class="search">
+      <image src="../../icons/search.png"></image>
+      <input type="text" placeholder="请输入关键字" bindinput="searchContent" value="{{searchVal}}" bindconfirm="toSearch" data-searchVal="{{searchVal}}"/>
+      <view class="button" bindtap="toSearch" data-searchVal="{{searchVal}}"><image src="../../icons/huiche.png"></image></view>
     </view>
-    <view class="sectionClass">
-      <block wx:for="{{section2}}" wx:key="key" wx:for-item="section2">
-        <view class="cellClass">
-         <template is="cellTemplate" data="{{item:section2}}" />
-        </view>
-      </block>
+ </view> 
+  <!-- 自定义组件Tabs -->
+<Tabs class="tabs" tabs="{{tabs}}" binditemChange="handleItemChange">
+  <block>
+    <!-- 触发跳转到的点击事件 -->
+    <view class="content">
+      <view class="item" wx:for="{{news}}" wx:key="news" bindtap="toWeb" data-href="{{news[index].href}}">
+         <view class="briefInfo">
+             <view class="title">{{news[index].title}}</view>
+             <view class="time">{{news[index].time}}</view>
+         </view>
+      </view>
     </view>
-    <view class="sectionClass">
-      <block wx:for="{{section3}}" wx:key="key" wx:for-item="section3">
-        <view class="cellClass">
-          <template is="cellTemplate" data="{{item:section3}}" />
-        </view>
-      </block>
+  </block>
+  <!-- <block wx:elif="{{tabs[1].isActive}}">
+    <view class="content">
+      <view class="item" wx:for="{{news}}" wx:key="news" bindtap="toWeb" data-href="{{news[index].href}}">
+        <image src="../../images/header.jpg"></image>
+         <view class="briefInfo">
+      <view class="title">{{news[index].title}}</view>
+      <view class="time">{{news[index].time}}</view>
+         </view>
+      </view>
     </view>
-   </scroll-view>
-  </view>
+  </block>
+  <block wx:elif="{{tabs[2].isActive}}">
+    <view class="content">
+      <view class="item" wx:for="{{news}}" wx:key="news" bindtap="toWeb" data-href="{{news[index].href}}">
+        <image src="../../images/header.jpg"></image>
+         <view class="briefInfo">
+      <view class="title">{{news[index].title}}</view>
+      <view class="time">{{news[index].time}}</view>
+         </view>
+      </view>
+    </view>
+  </block> -->
+</Tabs>
 </view>
+<image src='../../icons/goTop.png' class="goTop" hidden='{{!floorstatus}}' bindtap="goTop"></image>

@@ -6,6 +6,7 @@ const formatTime = date => {
   const minute = date.getMinutes()
   const second = date.getSeconds()
   const zhouji = date.getDay()
+
   return [year, month, day].map(formatNumber).join('/') + ' ' + [zhouji,hour, minute, second].map(formatNumber).join(':')
 }
 

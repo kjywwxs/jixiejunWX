@@ -1,8 +1,10 @@
 {
-  "usingComponents": {},
-  "navigationBarBackgroundColor":"#ffa589",
-  "navigationBarTextStyle":"white",
-  "navigationBarTitleText":"个人中心",
-  "backgroundColor":"#eeeeee",
-  "backgroundTextStyle":"light"
+  "navigationBarTitleText": "通知",
+  "navigationBarBackgroundColor": "#333",
+  "navigationBarTextStyle": "white",
+  "usingComponents": {
+    "Tabs":"../../components/Tabs/Tabs"
+  },
+  "pageOrientation": "auto",
+  "enablePullDownRefresh": true
 }

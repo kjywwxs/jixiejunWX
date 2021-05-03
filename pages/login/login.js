@@ -13,7 +13,7 @@ Page({
     username:'',
     password:'',
     ranstring: '',
-    isStudent:null,
+    isStudent:Boolean,
   },
   // 刷新验证码
 resetyz: function(){
@@ -26,25 +26,6 @@ resetyz: function(){
   })
 },
 
-//获取openID
-openIdGet:function (params) {
-  wx.cloud.callFunction({ name: 'openidGet', data:{ }, 
-  success: (res)=>{
-  // console.log(res);
-  this.setData({
-    openId:res.result.openid
-  })
-  // console.log(this.data.openId);
-  },
-    fail: (err)=>{
-  
-    },
-    complete: ()=>{
-    
-    }
-  })
-},
-
   // 输入框双向绑定
   content1:function(e){
     let name = e.detail.value ? e.detail.value : null ;
@@ -52,15 +33,16 @@ openIdGet:function (params) {
     that.setData({
       username: name,
     })
-    if (name.length<10) {
+    if (name.length>9) {
       that.setData({
-        isStudent:false
+        isStudent:true
       })
     }else{
       that.setData({
-        isStudent:true
-      }) 
+        isStudent:false
+      })
     }
+    // console.log(that.data.isStudent);
   },
   content2:function(e){
     let name = e.detail.value ? e.detail.value : null ;
@@ -77,16 +59,7 @@ openIdGet:function (params) {
     })
 
   },
- //延时函数
-//  sleep:function sleep(numberMillis) {
-//   var now = new Date();
-//   var exitTime = now.getTime() + numberMillis;
-//   while (true) {
-//     now = new Date();
-//     if (now.getTime() > exitTime)
-//     return;
-//   }
-// },
+
   //登录
   login:function(){
     let that = this
@@ -95,17 +68,12 @@ openIdGet:function (params) {
     .then( res => { 
       if (res.result.judge) {
         let content=res.result.msg
-        // that.sleep(1000)
         wx.showModal({
           title: '提示',
           content: content,
           showCancel:false,
           success (res) {
-            // if (res.confirm) {}
             that.courseGet()
-              // wx.reLaunch({
-              //   url: '/pages/denglu/denglu'
-              // })
           }
         })
 
@@ -133,19 +101,28 @@ openIdGet:function (params) {
 // 获取课程表
   courseGet:function(){
     let that = this
-    that.openIdGet()
+    wx.showLoading({
+      title: '跳转中',
+    })
     wx.cloud.callFunction({
       name: 'courseGet',
       data:{cookie:that.data.cookie ,isStudent: that.data.isStudent },
       success: (res)=>{
-        console.log(res);
+        //先删除缓存,再存入缓存
+        try {
+          wx.removeStorageSync('wxb52bd3f9641f1839kb')
+          wx.removeStorageSync('wxb52bd3f9641f1839userInfo')
+          wx.setStorageSync('wxb52bd3f9641f1839kb', res.result.kb)
+          wx.setStorageSync('wxb52bd3f9641f1839userInfo', res.result.userInfo)
+        } catch (e) { console.log(e); }
+        // console.log(res);
         db.collection('user')
         .doc(that.data.openId)
         .set({
           data:res.result,
           success: function (e) {
               wx.reLaunch({
-                url: '/pages/denglu/denglu'
+                url: '/pages/Mine/Mine?isStudent=' + that.data.isStudent+'&openId='+ that.data.openId,
               })
           }
         })
@@ -160,6 +137,9 @@ openIdGet:function (params) {
    */
   onLoad: function (options) {
     let that = this
+    that.setData({
+      openId:options.openId
+    })
     wx.cloud.callFunction({
       name: 'yzget',
       success: (res)=>{

@@ -1,0 +1,135 @@
+Page{
+  height: 100%;
+  background-color: #f0f0f0;
+}
+/* .container0{
+  background-color: #f0f0f0;
+  height: 100%;
+} */
+
+.container1{
+  display: flex;
+  flex-direction: column;
+  border-bottom-width: 1rpx;
+  border-bottom: rgb(223, 221, 221);
+  border-bottom-style: solid;
+  height: 100rpx;
+  padding-left: 40rpx;
+  padding-bottom: 18rpx;
+  font-size: large;
+  justify-content: flex-end;
+  background-color: white;
+}
+
+.container2{
+  display: flex;
+  height: 240rpx;
+  flex-direction: row;
+  justify-content: space-between;
+  justify-items: center;
+  align-content: center;
+  align-items: center;
+  padding-left: 20rpx;
+  padding-right: 8rpx;
+  background-color: white;
+}
+
+.container2-1{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 30%;
+  justify-content: center;
+  align-items: center;
+}
+
+.container2-1-1{
+  width: 90%;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.container2-2{
+  display: flex;
+  flex-direction: column;
+ justify-content: space-around;
+  height: 80%;
+  width: 30%;
+}
+
+.container2-3{
+height: 100%;
+width: 30%;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: space-around;
+}
+
+.container23{
+  height: 100%;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  }
+
+.container2-3-1{
+  height: 60%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: small;
+}
+
+.container2-3-2{
+  height: 40%;
+  width: 100%;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-end;
+  font-size: xx-small;
+  padding-right: 40rpx;
+  padding-bottom: 20rpx;
+}
+
+.container3{
+  margin: 30rpx;
+  padding: 0 36rpx;
+  background-color: white;
+}
+
+.container3-1{
+  height: 50rpx;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: smaller;
+  color: rgb(85, 241, 124);
+}
+
+.container3-2{
+  padding: 18rpx 16rpx;
+font-size: x-large;
+}
+
+.container3-3{
+  padding: 24rpx 16rpx;
+  display: flex;
+  flex-direction: row;
+  width: 98%;
+  justify-content: space-between;
+  font-size: 36rpx;
+}
+
+.container3-4{
+  padding: 24rpx 16rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: large;
+}

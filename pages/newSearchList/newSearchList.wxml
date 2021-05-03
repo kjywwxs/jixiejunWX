@@ -1,0 +1,10 @@
+<!--pages/newSearchList/newSearchList.wxml-->
+<view class="content">
+      <view class="item" wx:for="{{news}}" wx:key="news" bindtap="toWeb" data-href="{{news[index].href}}">
+         <view class="briefInfo">
+            <view class="title">{{news[index].title}}</view>
+            <view class="type">{{news[index].type}}</view>
+            <view class="time">{{news[index].time}}</view>
+         </view>
+      </view>
+</view>

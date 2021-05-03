@@ -13,14 +13,20 @@
     "miniprogram": {
       "list": [
         {
-          "name": "pages/demo/demo",
-          "pathName": "pages/demo/demo",
+          "name": "pages/index/index",
+          "pathName": "pages/index/index",
           "query": "",
           "scene": null
         },
         {
-          "name": "pages/index/index",
-          "pathName": "pages/index/index",
+          "name": "pages/newSearchList/newSearchList",
+          "pathName": "pages/newSearchList/newSearchList",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/webview/webview",
+          "pathName": "pages/webview/webview",
           "query": "",
           "scene": null
         },
@@ -31,27 +37,26 @@
           "scene": null
         },
         {
-          "name": "pages/kecheng/kecheng",
-          "pathName": "pages/kecheng/kecheng",
+          "name": "pages/msgCheck/msgCheck",
+          "pathName": "pages/msgCheck/msgCheck",
           "query": "",
           "scene": null
         },
         {
-          "name": "pages/denglu/denglu",
-          "pathName": "pages/login/login",
+          "name": "pages/kcb/kcb",
+          "pathName": "pages/kcb/kcb",
           "query": "",
           "scene": null
         },
         {
-          "name": "pages/courseFile/courseFile",
-          "pathName": "pages/courseFile/courseFile",
+          "name": "pages/logs/logs",
+          "pathName": "pages/logs/logs",
           "query": "",
           "scene": null
         },
         {
-          "name": "pages/demo0/demo0",
-          "pathName": "pages/demo0/demo0",
-          "query": "",
+          "name": "pages/setstorage/setstorage",
+          "pathName": "pages/setstorage/setstorage",
           "scene": null
         }
       ]

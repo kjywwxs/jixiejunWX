@@ -1,0 +1,10 @@
+<view class="title">{{title}}</view>
+
+<view class="border"><image src="../../images/you.png"></image></view>
+<view class="heards">
+  <view wx:for="{{heard}}" class="item">{{heard[index]}}</view>
+  <view class="item">{{readNumber}}</view>
+</view>
+<view class="border"><image src="../../images/zuo.png"></image></view>
+
+<wxParse nodes="{{ htmlText }}" />
